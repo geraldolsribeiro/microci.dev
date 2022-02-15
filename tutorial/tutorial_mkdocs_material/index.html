@@ -276,6 +276,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#passos-adicionais" class="md-nav__link">
+    Passos adicionais
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -338,6 +345,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#passos-adicionais" class="md-nav__link">
+    Passos adicionais
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -353,19 +367,20 @@
 
 <h1 id="tutorial-mkdocs">Tutorial mkdocs</h1>
 <h2 id="introducao">Introdução</h2>
-<p>Para documentar um projeto de maneira rápida e prática use a ferramenta
-<a href="https://squidfunk.github.io/mkdocs-material/">mkdocs-material</a>. Neste tutorial
-veremos como preparar de forma prática a documentação do projeto.</p>
+<p>A ferramenta <a href="https://squidfunk.github.io/mkdocs-material/">mkdocs-material</a>
+oferece uma maneira prática para documentar o projeto usando arquivos no
+formato markdown. Neste tutorial veremos como criar um projeto mkdocs e gerar
+uma documentação usando o <code>microCI</code>.</p>
 <h2 id="configuracao">Configuração</h2>
 <p>O <code>microCI</code> cria um arquivo de configuração inicial para executar  o <code>mkdocs-material</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>microCI --new mkdocs_material
 </code></pre></div>
 <p><img alt="microCI pipe bash" src="../tutorial_mkdocs_material_01.gif" /></p>
-<p>Um arquivo chamado <code>.microCI.yml</code> é criado no diretório atual:</p>
+<p>Um arquivo chamado <code>.microCI.yml</code> foi criado no diretório atual:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nn">---</span><span class="w"></span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="c1"># Remova este passo após a primeira execução</span><span class="w"></span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Cria</span><span class="nv"> </span><span class="s">arquivos</span><span class="nv"> </span><span class="s">iniciais</span><span class="nv"> </span><span class="s">do</span><span class="nv"> </span><span class="s">mkdocs&quot;</span><span class="w"></span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Criar</span><span class="nv"> </span><span class="s">arquivos</span><span class="nv"> </span><span class="s">iniciais</span><span class="nv"> </span><span class="s">do</span><span class="nv"> </span><span class="s">mkdocs&quot;</span><span class="w"></span>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">plugin</span><span class="p">:</span><span class="w"></span>
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mkdocs_material&quot;</span><span class="w"></span>
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;new</span><span class="nv"> </span><span class="s">.&quot;</span><span class="w"></span>
@@ -386,21 +401,32 @@ veremos como preparar de forma prática a documentação do projeto.</p>
 <a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">      </span><span class="c1"># Porta personalizada, caso já esteja utilizando a padrão 8000</span><span class="w"></span>
 <a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">      </span><span class="c1"># port: 9001</span><span class="w"></span>
 </code></pre></div>
+<p>Cada chave <code>name</code> inicia um novo passo. No arquivo criado existem 3 passos:</p>
+<ul>
+<li><code>Criar arquivos iniciais do mkdocs</code></li>
+<li><code>Construir documentação em formato HTML</code></li>
+<li><code>Servidor local na porta 8000</code></li>
+</ul>
+<p>Passos com a chave <code>only</code> não são executados por padrão.</p>
 <h2 id="primeira-execucao">Primeira execução</h2>
 <p>Edite o arquivo <code>.microCI.yml</code> para ajustar a configuração se necessário
-e execute os passos:</p>
+e execute:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>microCI <span class="p">|</span> bash
 </code></pre></div>
-<p>Se a geração foi bem sucedida o nome do passo seguido de <code>OK</code> é exibido no terminal:</p>
+<p>Se a geração foi bem sucedida o nome dos passos seguidos de <code>OK</code> são exibidos
+no terminal:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Criar arquivos iniciais do mkdocs...............: OK
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Construir documentação em formato HTML..........: OK
 </code></pre></div>
 <p><img alt="microCI pipe bash" src="../tutorial_mkdocs_material_02.gif" /></p>
-<p>Remova o primeir passo (Criar arquivos iniciais do mkdocs) e execute novamente:</p>
+<p>Remova o primeiro passo (Criar arquivos iniciais do mkdocs) e execute o comando novamente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>microCI <span class="p">|</span> bash
+</code></pre></div>
 <p><img alt="microCI pipe bash" src="../tutorial_mkdocs_material_03.gif" /></p>
+<h2 id="passos-adicionais">Passos adicionais</h2>
 <p>A configuração contem um passo que pode ser executado sozinho para subir um
 servidor para previsualizar a documentação.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>microCI --only local-step <span class="p">|</span> bash
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>microCI --only local-step <span class="p">|</span> bash
 </code></pre></div>
 <p><img alt="microCI pipe bash" src="../tutorial_mkdocs_material_04.gif" /></p>
 
