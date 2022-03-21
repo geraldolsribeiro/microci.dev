@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-         <loc>None</loc>
+         <loc>.</loc>
          <lastmod>2022-03-21</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="en/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="pt/"/>
+         
     </url>
     <url>
-         <loc>None</loc>
+         <loc>tutorial/tutorial_mkdocs_material_local/</loc>
          <lastmod>2022-03-21</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="en/tutorial/tutorial_mkdocs_material_local/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="pt/tutorial/tutorial_mkdocs_material_local/"/>
+         
     </url>
     <url>
-         <loc>None</loc>
+         <loc>tutorial/tutorial_mkdocs_material_servidor/</loc>
          <lastmod>2022-03-21</lastmod>
          <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="en/tutorial/tutorial_mkdocs_material_servidor/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="pt/tutorial/tutorial_mkdocs_material_servidor/"/>
+         
     </url>
 </urlset>
