@@ -9,6 +9,14 @@
          
     </url>
     <url>
+         <loc>intmain_docmd/</loc>
+         <lastmod>2022-03-25</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="en" href="en/intmain_docmd/"/>
+         <xhtml:link rel="alternate" hreflang="pt" href="pt/intmain_docmd/"/>
+         
+    </url>
+    <url>
          <loc>plugin_bash/</loc>
          <lastmod>2022-03-25</lastmod>
          <changefreq>daily</changefreq>
