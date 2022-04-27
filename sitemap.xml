@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
          <loc>.</loc>
-         <lastmod>2022-04-25</lastmod>
+         <lastmod>2022-04-27</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="en/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="pt/"/>
@@ -10,7 +10,7 @@
     </url>
     <url>
          <loc>intmain_docmd/</loc>
-         <lastmod>2022-04-25</lastmod>
+         <lastmod>2022-04-27</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="en/intmain_docmd/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="pt/intmain_docmd/"/>
@@ -18,7 +18,7 @@
     </url>
     <url>
          <loc>plugin_bash/</loc>
-         <lastmod>2022-04-25</lastmod>
+         <lastmod>2022-04-27</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="en/plugin_bash/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="pt/plugin_bash/"/>
@@ -26,7 +26,7 @@
     </url>
     <url>
          <loc>plugin_beamer/</loc>
-         <lastmod>2022-04-25</lastmod>
+         <lastmod>2022-04-27</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="en/plugin_beamer/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="pt/plugin_beamer/"/>
@@ -34,7 +34,7 @@
     </url>
     <url>
          <loc>plugin_clang-format/</loc>
-         <lastmod>2022-04-25</lastmod>
+         <lastmod>2022-04-27</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="en/plugin_clang-format/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="pt/plugin_clang-format/"/>
@@ -42,7 +42,7 @@
     </url>
     <url>
          <loc>plugin_clang-format_config/</loc>
-         <lastmod>2022-04-25</lastmod>
+         <lastmod>2022-04-27</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="en/plugin_clang-format_config/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="pt/plugin_clang-format_config/"/>
@@ -50,7 +50,7 @@
     </url>
     <url>
          <loc>plugin_clang-tidy/</loc>
-         <lastmod>2022-04-25</lastmod>
+         <lastmod>2022-04-27</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="en/plugin_clang-tidy/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="pt/plugin_clang-tidy/"/>
@@ -58,7 +58,7 @@
     </url>
     <url>
          <loc>plugin_cppcheck/</loc>
-         <lastmod>2022-04-25</lastmod>
+         <lastmod>2022-04-27</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="en/plugin_cppcheck/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="pt/plugin_cppcheck/"/>
@@ -66,7 +66,7 @@
     </url>
     <url>
          <loc>plugin_fetch/</loc>
-         <lastmod>2022-04-25</lastmod>
+         <lastmod>2022-04-27</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="en/plugin_fetch/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="pt/plugin_fetch/"/>
@@ -74,7 +74,7 @@
     </url>
     <url>
          <loc>plugin_fetch2/</loc>
-         <lastmod>2022-04-25</lastmod>
+         <lastmod>2022-04-27</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="en/plugin_fetch2/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="pt/plugin_fetch2/"/>
@@ -82,7 +82,7 @@
     </url>
     <url>
          <loc>plugin_git_deploy/</loc>
-         <lastmod>2022-04-25</lastmod>
+         <lastmod>2022-04-27</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="en/plugin_git_deploy/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="pt/plugin_git_deploy/"/>
@@ -90,7 +90,7 @@
     </url>
     <url>
          <loc>plugin_git_publish/</loc>
-         <lastmod>2022-04-25</lastmod>
+         <lastmod>2022-04-27</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="en/plugin_git_publish/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="pt/plugin_git_publish/"/>
@@ -98,7 +98,7 @@
     </url>
     <url>
          <loc>plugin_minio/</loc>
-         <lastmod>2022-04-25</lastmod>
+         <lastmod>2022-04-27</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="en/plugin_minio/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="pt/plugin_minio/"/>
@@ -106,7 +106,7 @@
     </url>
     <url>
          <loc>plugin_mkdocs_material/</loc>
-         <lastmod>2022-04-25</lastmod>
+         <lastmod>2022-04-27</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="en/plugin_mkdocs_material/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="pt/plugin_mkdocs_material/"/>
@@ -114,7 +114,7 @@
     </url>
     <url>
          <loc>plugin_mkdocs_material_config/</loc>
-         <lastmod>2022-04-25</lastmod>
+         <lastmod>2022-04-27</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="en/plugin_mkdocs_material_config/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="pt/plugin_mkdocs_material_config/"/>
@@ -122,7 +122,7 @@
     </url>
     <url>
          <loc>plugin_npm/</loc>
-         <lastmod>2022-04-25</lastmod>
+         <lastmod>2022-04-27</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="en/plugin_npm/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="pt/plugin_npm/"/>
@@ -130,7 +130,7 @@
     </url>
     <url>
          <loc>plugin_plantuml/</loc>
-         <lastmod>2022-04-25</lastmod>
+         <lastmod>2022-04-27</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="en/plugin_plantuml/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="pt/plugin_plantuml/"/>
@@ -138,7 +138,7 @@
     </url>
     <url>
          <loc>plugin_skip/</loc>
-         <lastmod>2022-04-25</lastmod>
+         <lastmod>2022-04-27</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="en/plugin_skip/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="pt/plugin_skip/"/>
@@ -146,7 +146,7 @@
     </url>
     <url>
          <loc>tutorial/tutorial_mkdocs_material_local/</loc>
-         <lastmod>2022-04-25</lastmod>
+         <lastmod>2022-04-27</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="en/tutorial/tutorial_mkdocs_material_local/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="pt/tutorial/tutorial_mkdocs_material_local/"/>
@@ -154,7 +154,7 @@
     </url>
     <url>
          <loc>tutorial/tutorial_mkdocs_material_servidor/</loc>
-         <lastmod>2022-04-25</lastmod>
+         <lastmod>2022-04-27</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="en/tutorial/tutorial_mkdocs_material_servidor/"/>
          <xhtml:link rel="alternate" hreflang="pt" href="pt/tutorial/tutorial_mkdocs_material_servidor/"/>
