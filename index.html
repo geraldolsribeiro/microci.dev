@@ -328,6 +328,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#debian-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debian dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-private-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker private repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#versions" class="md-nav__link">
     <span class="md-ellipsis">
       Versions
@@ -927,6 +945,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#debian-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debian dependencies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-private-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker private repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#versions" class="md-nav__link">
     <span class="md-ellipsis">
       Versions
@@ -963,15 +999,19 @@
 
 
 <h1 id="welcome-to-microci">Welcome to microCI</h1>
+<p><strong>microCI</strong> is a powerful tool designed to streamline the creation of
+continuous integration pipelines by generating portable, auditable scripts for
+executing tasks in Docker containers. This ensures that every step of the
+process is fully reproducible across various environments:</p>
+<ul>
+<li>Developer's machines</li>
+<li>Servers for automatic builds after commits</li>
+<li>Servers for deployment to production</li>
+</ul>
+<p>With microCI, the same tool, free of dependencies, can be used seamlessly on
+both development and production environments. For complete documentation, visit
+microci.dev.</p>
 <p>The complete documentation can be found at <a href="https://microci.dev">microci.dev</a>.</p>
-<p><code>microCI</code> is a tool to assist in building continuous integration pipelines.</p>
-<p>The main differentiator of <code>microCI</code> is the generation of <strong>portable scripts</strong>
-and fully <strong>auditable</strong> for executing tasks in <strong>docker containers</strong>.</p>
-<p>Since all steps are executed in one or more docker containers, the entire
-process becomes reproducible on: a) any developer's machine, b) the server that
-will perform automatic builds after commits, c) the server that will perform
-deployment to production... In short, the same tool, without dependencies, can
-be used on both the developer's machine and the server.</p>
 <h2 id="on-the-desktop">On the desktop</h2>
 <p>Using <code>microCI</code> on the developer's desktop is very simple:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>microCI<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
@@ -995,9 +1035,9 @@ triggered, execute <code>microCI</code> in the respective project folders.</p>
 <p>The installation is equally simple, just copy the executable to a folder that
 is in the <code>PATH</code>. To completely remove <code>microCI</code> from the system, just delete
 the file copied to the PATH.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://github.com/geraldolsribeiro/microci/releases/latest/download/microCI<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span>-o<span class="w"> </span>/usr/local/bin/microCI
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>/usr/local/bin/microCI
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://github.com/geraldolsribeiro/microci/releases/latest/download/microCI<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span>-o<span class="w"> </span>/usr/bin/microCI
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>/usr/bin/microCI
 </code></pre></div>
 <h2 id="docker-container">Docker Container</h2>
 <p>You can use <strong>any Docker container</strong> for execution, both public ones from
@@ -1016,50 +1056,64 @@ repositories is to access them through an SSH key.</p>
 <li>use of environment variables and secrets configured on the server</li>
 <li>create a Docker image from a git repository</li>
 </ul>
+<h2 id="debian-dependencies">Debian dependencies</h2>
+<p>For building standalone microCI binary the following dependencies should be installed:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gettext<span class="w"> </span>clang-format<span class="w"> </span>libspdlog-dev<span class="w"> </span>libfmt-dev<span class="w"> </span>libyaml-cpp-dev<span class="w"> </span>libssl-dev<span class="w"> </span>libcrypto++-dev
+</code></pre></div>
+<h2 id="docker-private-repository">Docker private repository</h2>
+<p>In some cases, running a private registry without SSL, is necessary to add the
+IP of registry server to the <code>insecure-registries</code> section of the
+<code>/etc/docker/daemon.json</code> file.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="s2">&quot;insecure-registries&quot;</span>:<span class="w"> </span><span class="o">[</span><span class="s2">&quot;192.168.1.128:5000&quot;</span>,<span class="w"> </span><span class="s2">&quot;192.168.1.11:5000&quot;</span><span class="o">]</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="o">}</span>
+</code></pre></div>
 <h2 id="versions">Versions</h2>
 <ul>
+<li><code>0.31.0</code> Plugin <code>template</code></li>
 <li><code>0.30.0</code> Plugin <code>pikchr</code></li>
 <li><code>0.29.0</code> Plugin <code>docmd</code></li>
 <li><code>0.28.0</code> Translation support added</li>
 <li><code>0.27.0</code> Plugin <code>pandoc</code></li>
 <li><code>0.26.3</code> Update <code>clang-tidy</code></li>
 <li><code>0.26.0</code> Offline mode</li>
-<li><code>0.25.6</code> Plugin <code>git_publish</code> com escolha de branch (p.e. <code>gh-pages</code>)</li>
+<li><code>0.25.6</code> Plugin <code>git_publish</code> with branch selection support (p.e. <code>gh-pages</code>)</li>
 <li><code>0.24.0</code> Plugin <code>docker_build</code></li>
-<li><code>0.23.0</code> Plugin <code>fetch</code> download github</li>
-<li><code>0.22.0</code> Plugin <code>fetch</code> download de pastas no github</li>
+<li><code>0.23.0</code> Plugin <code>fetch</code> download from github (advanced)</li>
+<li><code>0.22.0</code> Plugin <code>fetch</code> download from github (folder)</li>
 <li><code>0.21.0</code> Plugin <code>flawfinder</code></li>
-<li><code>0.20.0</code> Imagem <code>intmain/microci_clang</code></li>
-<li><code>0.19.0</code> Documentação com <code>intmain_docmd</code></li>
+<li><code>0.20.0</code> Docker image <code>intmain/microci_clang</code></li>
+<li><code>0.19.0</code> Documentation with <code>intmain/docmd</code></li>
 <li><code>0.18.0</code> Plugin <code>minio</code></li>
-<li><code>0.17.0</code> Plugin <code>skip</code>; Status de execução</li>
-<li><code>0.16.1</code> Refatoração dos plugins; Execução default como não root</li>
-<li><code>0.15.2</code> Plugin <code>fetch</code> URL e pastas do gitlab</li>
+<li><code>0.17.0</code> Plugin <code>skip</code>; Execution status</li>
+<li><code>0.16.1</code> Plugin refactoring; Default execution as non-root</li>
+<li><code>0.15.2</code> Plugin <code>fetch</code> URL and gitlab folder</li>
 <li><code>0.14.1</code> Plugin <code>beamer</code></li>
-<li><code>0.13.0</code> Configuração de rede docker</li>
-<li><code>0.12.0</code> Plugins <code>clang-format</code> e <code>junit2html</code></li>
-<li><code>0.11.1</code> Notificação em canal do discord</li>
-<li><code>0.10.1</code> Múltiplos arquivos de modelo</li>
+<li><code>0.13.0</code> Docker network configuration</li>
+<li><code>0.12.0</code> Plugins <code>clang-format</code> and <code>junit2html</code></li>
+<li><code>0.11.1</code> Discord channel notification</li>
+<li><code>0.10.1</code> Multiple template added</li>
 <li><code>0.9.0</code> Plugin <code>plantuml</code></li>
 <li><code>0.8.0</code> Plugin <code>clang-tidy</code></li>
 <li><code>0.7.0</code> Plugin <code>cppcheck</code></li>
 <li><code>0.6.1</code> Plugin <code>git_publish</code></li>
-<li><code>0.5.0</code> Montagem de volumes; Cópia de chave SSH</li>
-<li><code>0.4.0</code> Construção do microCI pelo microCI</li>
-<li><code>0.3.0</code> Cria arquivos de configuração</li>
+<li><code>0.5.0</code> Volume mounting; SSH key copy</li>
+<li><code>0.4.0</code> Building microCI by microCI</li>
+<li><code>0.3.0</code> Configuration files creation</li>
 <li><code>0.2.0</code> Plugin <code>mkdocs</code></li>
-<li><code>0.1.0</code> Passo em <code>bash</code> e plugin <code>git_deploy</code></li>
-<li><code>0.0.1</code> Versão inicial para prova de conceito</li>
+<li><code>0.1.0</code> Plugin <code>bash</code> and <code>git_deploy</code></li>
+<li><code>0.0.1</code> Proof of concept/Initial version</li>
 </ul>
 <h2 id="license">License</h2>
 <p>MIT License</p>
 <p>Copyright (c) 2022-2024 Geraldo Luis da Silva Ribeiro</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>░░░░░░░░░░░░░░░░░
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>░░░░░░░█▀▀░▀█▀░░░
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>░░░█░█░█░░░░█░░░░
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>░░░█▀▀░▀▀▀░▀▀▀░░░
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>░░░▀░░░░░░░░░░░░░
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>░░░░░░░░░░░░░░░░░
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>░░░░░░░░░░░░░░░░░
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>░░░░░░░█▀▀░▀█▀░░░
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>░░░█░█░█░░░░█░░░░
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>░░░█▀▀░▀▀▀░▀▀▀░░░
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>░░░▀░░░░░░░░░░░░░
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>░░░░░░░░░░░░░░░░░
 </code></pre></div>
 <p>Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
