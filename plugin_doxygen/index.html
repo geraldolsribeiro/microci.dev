@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../plugin_clang-tidy/">
+        <link rel="prev" href="../plugin_cppcheck/">
       
       
-        <link rel="next" href="../plugin_doxygen/">
+        <link rel="next" href="../plugin_fetch/">
       
       
       <link rel="icon" href="../assets/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>cppcheck plugin - microCI Documentation</title>
+        <title>doxygen plugin - microCI Documentation</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cppcheck-plugin" class="md-skip">
+        <a href="#doxygen-plugin" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              cppcheck plugin
+              doxygen plugin
             
           </span>
         </div>
@@ -398,6 +398,26 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_cppcheck/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cppcheck plugin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -414,32 +434,12 @@
         
   
   <span class="md-ellipsis">
-    cppcheck plugin
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../plugin_doxygen/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
     doxygen plugin
   </span>
   
 
       </a>
+      
     </li>
   
 
@@ -804,23 +804,23 @@
   
 
 
-<h1 id="cppcheck-plugin">cppcheck plugin</h1>
+<h1 id="doxygen-plugin">doxygen plugin</h1>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">steps</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Create</span><span class="nv"> </span><span class="s">C++</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">verification</span><span class="nv"> </span><span class="s">report</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">cppcheck&quot;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Check</span><span class="nv"> </span><span class="s">C++</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">generate</span><span class="nv"> </span><span class="s">HTML</span><span class="nv"> </span><span class="s">report&quot;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">plugin</span><span class="p">:</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;cppcheck&quot;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="nt">options</span><span class="p">:</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="c1"># - &quot;-j 2&quot;             # two jobs simultaneously</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="c1"># - &quot;--clang=clang-11&quot; # uses clang as analyser</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="c1"># - &quot;--bug-hunting&quot;    # useful for code review</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="c1"># - &quot;--std=c++11&quot;</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">      </span><span class="nt">include</span><span class="p">:</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;include&quot;</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">      </span><span class="nt">source</span><span class="p">:</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;src&quot;</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;test&quot;</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">      </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;unix64&quot;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Build</span><span class="nv"> </span><span class="s">documentation</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">doxygen&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Build</span><span class="nv"> </span><span class="s">documentation</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">doxygen&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">docker</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;intmain/microci_doxygen&quot;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">plugin</span><span class="p">:</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">doxygen</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="nt">doxyfile</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./Doxyfile</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="nt">output_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">doxygen</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="w w-Error"> </span><span class="nt">html</span><span class="p">:</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1">#      html:</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">     </span><span class="nt">header</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">header.html</span><span class="w">    </span><span class="c1"># Optional</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1">#        header: header.html    # Optional</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">     </span><span class="nt">footer</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">footer.html</span><span class="w">    </span><span class="c1"># Optional</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1">#        footer: footer.html    # Optional</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">     </span><span class="nt">stylesheet</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">style.css</span><span class="w">  </span><span class="c1"># Optional</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="c1">#        stylesheet: style.css  # Optional</span>
 </code></pre></div>
 
 
