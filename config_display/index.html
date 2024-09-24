@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../plugin_git_deploy/">
+        <link rel="prev" href="../00_usage/">
       
       
-        <link rel="next" href="../plugin_minio/">
+        <link rel="next" href="../environmen_variables/">
       
       
       <link rel="icon" href="../assets/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>git_publish plugin - microCI Documentation</title>
+        <title>Running graphical application inside docker - microCI Documentation</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#git_publish-plugin" class="md-skip">
+        <a href="#running-graphical-application-inside-docker" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              git_publish plugin
+              Running graphical application inside docker
             
           </span>
         </div>
@@ -258,10 +258,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../config_display/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -270,6 +279,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -518,19 +528,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../plugin_git_publish/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -539,7 +540,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -884,25 +884,24 @@
   
 
 
-<h1 id="git_publish-plugin">git_publish plugin</h1>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nn">---</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">steps</span><span class="p">:</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Publicar</span><span class="nv"> </span><span class="s">em</span><span class="nv"> </span><span class="s">outro</span><span class="nv"> </span><span class="s">repositório</span><span class="nv"> </span><span class="s">git&quot;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Descrição</span><span class="nv"> </span><span class="s">deste</span><span class="nv"> </span><span class="s">passo&quot;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="c1"># network: bridge # (default)</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="c1"># run_as: root</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="c1"># run_as: user # (default)</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nt">ssh</span><span class="p">:</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">      </span><span class="nt">copy_from</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${HOME}/.ssh&quot;</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">      </span><span class="c1"># copy_to: &quot;/root/.ssh&quot;          # root</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">      </span><span class="c1"># copy_to: &quot;/tmp/microci_deploy&quot; # user (default)</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="nt">plugin</span><span class="p">:</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;git_publish&quot;</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">      </span><span class="nt">git_url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;git@seuservidor.com.br:awesome_deploy.git&quot;</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">      </span><span class="nt">branch</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;gh-pages&quot;</span><span class="w">             </span><span class="c1"># O branch padrão é o &#39;main&#39;</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">      </span><span class="nt">copy_to</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/tmp/microci_deploy&quot;</span><span class="w"> </span><span class="c1"># Pasta padrão dentro do container</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">      </span><span class="nt">copy_from</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;site&quot;</span><span class="w">              </span><span class="c1"># Pasta padrão que contêm os arquivos</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">      </span><span class="nt">clean_before</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">             </span><span class="c1"># Remove todos os arquivos antes de copiar o novos</span>
+<h1 id="running-graphical-application-inside-docker">Running graphical application inside docker</h1>
+<p>To enable execution of graphical application inside the docker container you should add the <code>DISPLAY</code> environment variable, and mount the <code>/tmp/.X11-unix</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  - name: &quot;QtCreator GUI for local edition&quot;
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    docker: &quot;my_company/devel-ubuntu-24.04_x86_64&quot;
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    network: none
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    only: qtcreator
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    run_as: user
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    envs:
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>      DISPLAY: &quot;$DISPLAY&quot;
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>      HOME: /microci_workspace # Folder where qtcreator saves .config
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    volumes:
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>      - destination: /tmp/.X11-unix
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        source: /tmp/.X11-unix
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        mode: rw
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    plugin:
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>      name: bash
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>      bash: |
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        qtcreator
 </code></pre></div>
 
 
