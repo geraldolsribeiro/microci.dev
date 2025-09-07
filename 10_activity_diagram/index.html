@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../plugin_beamer/">
+        <link rel="prev" href="../00_update/">
       
       
-        <link rel="next" href="../plugin_clang-format_config/">
+        <link rel="next" href="../99_license/">
       
       
       <link rel="icon" href="../assets/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>clang-format plugin - microCI Documentation</title>
+        <title>Activity diagram - microCI Documentation</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#clang-format-plugin" class="md-skip">
+        <a href="#activity-diagram" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              clang-format plugin
+              Activity diagram
             
           </span>
         </div>
@@ -323,10 +323,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../10_activity_diagram/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -336,6 +345,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -491,19 +501,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../plugin_clang-format/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -513,7 +514,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1041,18 +1041,19 @@
   
 
 
-<h1 id="clang-format-plugin">clang-format plugin</h1>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">steps</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Formatar</span><span class="nv"> </span><span class="s">código</span><span class="nv"> </span><span class="s">C++</span><span class="nv"> </span><span class="s">com</span><span class="nv"> </span><span class="s">clang-format&quot;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Padroniza</span><span class="nv"> </span><span class="s">formato</span><span class="nv"> </span><span class="s">do</span><span class="nv"> </span><span class="s">código</span><span class="nv"> </span><span class="s">usando</span><span class="nv"> </span><span class="s">regras&quot;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">run_as</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">plugin</span><span class="p">:</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;clang-format&quot;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="c1"># Lista arquivos a serem formatados</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;src/*.cpp&quot;</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;test/*.cpp&quot;</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;include/*.hpp&quot;</span>
-</code></pre></div>
+<h1 id="activity-diagram">Activity diagram</h1>
+<p>To generate activity diagrams for the workflow use the option <code>--actvity-diagram</code> option</p>
+<p>There are two king of steps:</p>
+<ul>
+<li><strong>main</strong> step: list of sequential steps executed on the main pipeline</li>
+<li><strong>only</strong> step: alternative single step executed alone</li>
+</ul>
+<p>The diagrams below are generated automatically by <strong>microCI</strong> based on
+<code>.microCI.yml</code> file.</p>
+<p><img alt="Main pipeline" src="../diagrams/microCI_activity_diagram.png" /></p>
+<p><img alt="Alternative step" src="../diagrams/microCI_activity_diagram_001.png" /></p>
+<p><img alt="Alternative step" src="../diagrams/microCI_activity_diagram_002.png" /></p>
+<p><img alt="Alternative step" src="../diagrams/microCI_activity_diagram_003.png" /></p>
 
 
 
