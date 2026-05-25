@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../99_todo/">
+        <link rel="prev" href="../plugin_git_publish/">
       
       
-        <link rel="next" href="../environmen_variables/">
+        <link rel="next" href="../plugin_minio/">
       
       
       <link rel="icon" href="../assets/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Running graphical application inside docker - microCI Documentation</title>
+        <title>Plugin jfrog - microCI Documentation</title>
       
     
     
@@ -69,11 +69,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#running-graphical-application-inside-docker" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -105,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Running graphical application inside docker
+              Plugin jfrog
             
           </span>
         </div>
@@ -386,19 +381,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../config_display/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -408,7 +394,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -690,10 +675,17 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../plugin_jfrog/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -703,6 +695,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1042,8 +1035,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -1062,25 +1053,30 @@
   
 
 
-<h1 id="running-graphical-application-inside-docker">Running graphical application inside docker</h1>
-<p>To enable execution of graphical application inside the docker container you should add the <code>DISPLAY</code> environment variable, and mount the <code>/tmp/.X11-unix</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  - name: &quot;QtCreator GUI for local edition&quot;
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    docker: &quot;my_company/devel-ubuntu-24.04_x86_64&quot;
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    network: none
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    only: qtcreator
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    run_as: user
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    envs:
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>      DISPLAY: &quot;$DISPLAY&quot;
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>      HOME: /microci_workspace # Folder where qtcreator saves .config
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    volumes:
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>      - destination: /tmp/.X11-unix
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        source: /tmp/.X11-unix
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        mode: rw
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    plugin:
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>      name: bash
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>      bash: |
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        qtcreator
+  <h1>Plugin jfrog</h1>
+
+<p>Source file: <code>new/jfrog.yml</code></p>
+<p># jfrog plugin</p>
+<p>See <strong>jfrog Client</strong> documentation at <a href="https://jfrog.com/help/r/jfrog-applications-and-cli-documentation/jfrog-cli">https://jfrog.com/help/r/jfrog-applications-and-cli-documentation/jfrog-cli</a>.</p>
+<details>
+<summary>Details</summary>
+<p>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">steps</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Save</span><span class="nv"> </span><span class="s">artifact</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">jfrog</span><span class="nv"> </span><span class="s">artifact&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Description</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">step&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">run_as</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">envs</span><span class="p">:</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="nt">HOME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">plugin</span><span class="p">:</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jfrog</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">      </span><span class="nt">bash</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="no"># Copy files from workspace to the repository</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="no">jf rt upload list.txt test-artifacts/folder/list.txt</span>
 </code></pre></div>
+
+</p>
+</details>
 
 
 
