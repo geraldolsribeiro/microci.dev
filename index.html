@@ -354,7 +354,7 @@
         
   
   <span class="md-ellipsis">
-    Uninstall
+    Uninstalling microCI
     
   </span>
   
@@ -375,7 +375,7 @@
         
   
   <span class="md-ellipsis">
-    Update microCI
+    Updating microCI
     
   </span>
   
@@ -1178,33 +1178,33 @@
 <p><a href="https://github.com/geraldolsribeiro/microCI/actions/workflows/c-cpp.yml"><img alt="C/C++ CI" src="https://github.com/geraldolsribeiro/microCI/actions/workflows/c-cpp.yml/badge.svg" /></a></p>
 <p><strong>microCI</strong> is a powerful tool designed to streamline the creation of
 continuous-integration pipelines by generating portable, auditable scripts for
-executing tasks in Docker containers. </p>
+executing tasks in Docker containers.</p>
 <p>For complete documentation, visit <a href="https://microci.dev">microci.dev</a>.</p>
 <p><center><img alt="CI/CD Pipeline" src="images/microci-ci_cd_pipeline.svg" /></center></p>
 <p>CI/CD stands for Continuous Integration / Continuous Deployment. CI and CD
 pipelines form the backbone of modern software development, enabling teams to
-ship features faster and more reliably. Solid CI/CD pipeline architecture is
+ship features faster and more reliably. A solid CI/CD pipeline architecture is
 key to making these workflows scalable, secure, and efficient—not just
 automated.</p>
 <h2 id="how-it-works">How it works?</h2>
-<p><strong>microCI</strong> creates a Bash script that implements the pipeline defined in an YAML file.</p>
+<p><strong>microCI</strong> creates a Bash script that implements the pipeline defined in a YAML file.</p>
 <p><center><img alt="YAML to Bash" src="images/microci-yaml_to_bash.svg" /></center></p>
-<p>One portable Bash function is created to execute each step in the pipeline recipe.</p>
+<p>Each step in the pipeline recipe is executed by its own portable Bash function.</p>
 <h2 id="how-to-execute">How to execute?</h2>
 <p><center><img alt="How to execute" src="images/microci-execute.svg" /></center></p>
-<p>To use <code>microCI</code> is very simple:</p>
+<p>Using <code>microCI</code> is very simple:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>microCI<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
 </code></pre></div>
 <h2 id="where-can-i-use-microci">Where can I use microCI?</h2>
 <p><center><img alt="Where" src="images/microci-where.svg" /></center></p>
 <p>Every step in the process is fully reproducible across various environments:</p>
 <ul>
-<li>Developer's workstation</li>
-<li>Servers for automatic builds after commits</li>
-<li>Servers for deployment to production</li>
+<li>Developer workstations</li>
+<li>Build servers triggered by commits</li>
+<li>Deployment servers for production releases</li>
 </ul>
-<p>With microCI, the same tool, free of dependencies, can be used seamlessly in
-both development and production environments.</p>
+<p>With microCI, the same zero-dependency tool works seamlessly in both
+development and production environments.</p>
 
 
 
