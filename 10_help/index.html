@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../plugin_mkdocs_material/" rel="prev"/>
-<link href="../plugin_npm/" rel="next"/>
+<link href="../10_activity_diagram/" rel="prev"/>
+<link href="../build_microci_locally/" rel="next"/>
 <link href="../assets/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.5" name="generator"/>
-<title>Plugin mkdocs material config - microCI Documentation</title>
+<title>Help - microCI Documentation</title>
 <link href="../assets/stylesheets/main.8608ea7d.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#mkdocs_material_config-plugin">
+<a class="md-skip" href="#help">
           Skip to content
         </a>
 </div>
@@ -46,7 +46,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Plugin mkdocs material config
+              Help
             
           </span>
 </div>
@@ -158,8 +158,9 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../10_help/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Help
     
@@ -310,9 +311,8 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../plugin_mkdocs_material_config/">
 <span class="md-ellipsis">
     Plugin mkdocs material config
     
@@ -432,68 +432,61 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<p>Source file: <code>new/mkdocs_material_config.yml</code></p>
-<h1 id="mkdocs_material_config-plugin">mkdocs_material_config plugin</h1>
-<details>
-<summary>Details</summary>
-<p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Site name</span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nt">repo_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/geraldolsribeiro/microCI</span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nt">repo_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">geraldolsribeiro/microCI</span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="nt">edit_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">edit/master/docs/</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="nt">theme</span><span class="p">:</span>
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material</span>
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">  </span><span class="c1"># language: pt</span>
-<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">  </span><span class="c1"># logo: images/logo.svg</span>
-<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">  </span><span class="c1"># favicon: images/favicon.png</span>
-<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">  </span><span class="nt">palette</span><span class="p">:</span>
-<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="c1"># Palette toggle for light mode</span>
-<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">scheme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
-<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">      </span><span class="nt">toggle</span><span class="p">:</span>
-<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">        </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/brightness-7</span><span class="w"> </span>
-<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Switch to dark mode</span>
-<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>
-<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="c1"># Palette toggle for dark mode</span>
-<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">scheme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slate</span>
-<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">      </span><span class="nt">toggle</span><span class="p">:</span>
-<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">        </span><span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">material/brightness-4</span>
-<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Switch to light mode</span>
-<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">  </span><span class="nt">icon</span><span class="p">:</span>
-<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">    </span><span class="nt">repo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fontawesome/brands/github</span>
-<a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">    </span><span class="c1"># repo: fontawesome/brands/gitlab</span>
-<a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="nt">features</span><span class="p">:</span>
-<a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.instant</span>
-<a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="nt">extra</span><span class="p">:</span>
-<a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">  </span><span class="nt">homepage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://url-final-do-projeto/</span>
-<a href="#__codelineno-0-29" id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="nt">extra_css</span><span class="p">:</span>
-<a href="#__codelineno-0-30" id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">css/print.css</span>
-<a href="#__codelineno-0-31" id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="nt">markdown_extensions</span><span class="p">:</span>
-<a href="#__codelineno-0-32" id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">admonition</span>
-<a href="#__codelineno-0-33" id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">def_list</span>
-<a href="#__codelineno-0-34" id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">  </span><span class="c1"># Para utilizar atributos nas imagens</span>
-<a href="#__codelineno-0-35" id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="w">  </span><span class="c1"># ![WebCapture](/img/support/prod/screenshot-web-capture.png){: style="height:150px;width:150px"}</span>
-<a href="#__codelineno-0-36" id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">attr_list</span>
-<a href="#__codelineno-0-37" id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.superfences</span><span class="p">:</span>
-<a href="#__codelineno-0-38" id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">      </span><span class="nt">custom_fences</span><span class="p">:</span>
-<a href="#__codelineno-0-39" id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mermaid</span>
-<a href="#__codelineno-0-40" id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">          </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mermaid</span>
-<a href="#__codelineno-0-41" id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">          </span><span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="kt">!!python/name:pymdownx.superfences.fence_code_format</span>
-<a href="#__codelineno-0-42" id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.tasklist</span><span class="p">:</span>
-<a href="#__codelineno-0-43" id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="w">      </span><span class="nt">custom_checkbox</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<a href="#__codelineno-0-44" id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.emoji</span><span class="p">:</span>
-<a href="#__codelineno-0-45" id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="w">      </span><span class="nt">emoji_generator</span><span class="p">:</span><span class="w"> </span><span class="kt">!!python/name:materialx.emoji.to_svg</span>
-<a href="#__codelineno-0-46" id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.highlight</span><span class="p">:</span>
-<a href="#__codelineno-0-47" id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="w">      </span><span class="nt">anchor_linenums</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<a href="#__codelineno-0-48" id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.inlinehilite</span>
-<a href="#__codelineno-0-49" id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.mark</span>
-<a href="#__codelineno-0-50" id="__codelineno-0-50" name="__codelineno-0-50"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.snippets</span>
-<a href="#__codelineno-0-51" id="__codelineno-0-51" name="__codelineno-0-51"></a><span class="nt">plugins</span><span class="p">:</span>
-<a href="#__codelineno-0-52" id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">search</span><span class="p">:</span>
-<a href="#__codelineno-0-53" id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="w">      </span><span class="nt">lang</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pt</span>
-<a href="#__codelineno-0-54" id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mermaid2</span>
+<h1 id="help">Help</h1>
+<p>The basic usage can be obtained by passing the <code>--help</code> option:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>microCI --help
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>                           ░░░░░░░░░░░░░░░░░
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>                           ░░░░░░░█▀▀░▀█▀░░░
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>                           ░░░█░█░█░░░░█░░░░
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>                           ░░░█▀▀░▀▀▀░▀▀▀░░░
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>                           ░░░▀░░░░░░░░░░░░░
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a>                           ░░░░░░░░░░░░░░░░░
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a>                             microCI 0.44.0
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a>Options:
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>  -h,--help                Print this help
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>  -V,--version             Print the microCI version
+<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a>  -T,--test-config         Configuration test
+<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>  -A,--activity-diagram    Generate activity diagram
+<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a>  -a,--append-log          Append log
+<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>  -O,--only name           Execute only a single step
+<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a>  -l,--list                List steps
+<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>  -N,--number N            Execute the Nth step
+<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a>  -x,--hash hh             Execute the hh step
+<a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a>  -U,--update-db           Update observability database
+<a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a>  -u,--update              Update microCI to stable stream
+<a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a>  -D,--update-dev          Update microCI to development stream
+<a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a>  -X,--uninstall           Uninstall
+<a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a>  -i,--input file.yml      Load the configuration from file.yml
+<a href="#__codelineno-0-29" id="__codelineno-0-29" name="__codelineno-0-29"></a>  -H,--home alt_home_dir   Alternative home directory
+<a href="#__codelineno-0-30" id="__codelineno-0-30" name="__codelineno-0-30"></a>  -c,--config gitlab_ci    Create a .gitlab-ci.yml example config
+<a href="#__codelineno-0-31" id="__codelineno-0-31" name="__codelineno-0-31"></a>  -n,--new skip            Create a placeholder step
+<a href="#__codelineno-0-32" id="__codelineno-0-32" name="__codelineno-0-32"></a>  -n,--new bash            Create a command line step
+<a href="#__codelineno-0-33" id="__codelineno-0-33" name="__codelineno-0-33"></a>  -n,--new docmd           Create a documentation step
+<a href="#__codelineno-0-34" id="__codelineno-0-34" name="__codelineno-0-34"></a>  -n,--new mkdocs_material Create a documentation step
+<a href="#__codelineno-0-35" id="__codelineno-0-35" name="__codelineno-0-35"></a>  -n,--new doxygen         Create a documentation step
+<a href="#__codelineno-0-36" id="__codelineno-0-36" name="__codelineno-0-36"></a>  -n,--new pandoc          Create a document conversion step
+<a href="#__codelineno-0-37" id="__codelineno-0-37" name="__codelineno-0-37"></a>  -n,--new git_publish     Create a publish step
+<a href="#__codelineno-0-38" id="__codelineno-0-38" name="__codelineno-0-38"></a>  -n,--new git_deploy      Create a production deploy step
+<a href="#__codelineno-0-39" id="__codelineno-0-39" name="__codelineno-0-39"></a>  -n,--new plantuml        Create a diagram generation step
+<a href="#__codelineno-0-40" id="__codelineno-0-40" name="__codelineno-0-40"></a>  -n,--new pikchr          Create a diagram generation step
+<a href="#__codelineno-0-41" id="__codelineno-0-41" name="__codelineno-0-41"></a>  -n,--new mermaid         Create a diagram generation step
+<a href="#__codelineno-0-42" id="__codelineno-0-42" name="__codelineno-0-42"></a>  -n,--new clang-format    Create a code format step
+<a href="#__codelineno-0-43" id="__codelineno-0-43" name="__codelineno-0-43"></a>  -n,--new vhdl-format     Create a code format step
+<a href="#__codelineno-0-44" id="__codelineno-0-44" name="__codelineno-0-44"></a>  -n,--new beamer          Create a PDF presentation step
+<a href="#__codelineno-0-45" id="__codelineno-0-45" name="__codelineno-0-45"></a>  -n,--new fetch           Create a download external artfact step
+<a href="#__codelineno-0-46" id="__codelineno-0-46" name="__codelineno-0-46"></a>  -n,--new minio           Create a upload/download artifact step
+<a href="#__codelineno-0-47" id="__codelineno-0-47" name="__codelineno-0-47"></a>  -n,--new jfrog           Create a upload/download artifact step
+<a href="#__codelineno-0-48" id="__codelineno-0-48" name="__codelineno-0-48"></a>  -n,--new cppcheck        Create a C++ SAST step
+<a href="#__codelineno-0-49" id="__codelineno-0-49" name="__codelineno-0-49"></a>  -n,--new clang-tidy      Create a C++ SAST step
+<a href="#__codelineno-0-50" id="__codelineno-0-50" name="__codelineno-0-50"></a>  -n,--new flawfinder      Create a C++ SAST step
+<a href="#__codelineno-0-51" id="__codelineno-0-51" name="__codelineno-0-51"></a>  -n,--new docker_build    Create a local docker build step
+<a href="#__codelineno-0-52" id="__codelineno-0-52" name="__codelineno-0-52"></a>  -n,--new template        Create a template step
 </code></pre></div>
-</p>
-</details>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
