@@ -20,7 +20,7 @@
     
     
       
-        <title>Plugin npm - microCI Documentation</title>
+        <title>npm plugin - microCI Documentation</title>
       
     
     
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Plugin npm
+              npm plugin
             
           </span>
         </div>
@@ -452,11 +452,32 @@
   
   
     <li class="md-nav__item">
+      <a href="../plugin_bash/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    bash plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../plugin_beamer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Plugin beamer
+    beamer plugin
     
   </span>
   
@@ -477,7 +498,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin clang format
+    clang-format plugin
     
   </span>
   
@@ -498,7 +519,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin clang format config
+    clang-format_config plugin
     
   </span>
   
@@ -519,7 +540,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin clang tidy
+    clang-tidy plugin
     
   </span>
   
@@ -540,7 +561,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin cppcheck
+    cppcheck plugin
     
   </span>
   
@@ -582,7 +603,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin fetch
+    fetch plugin
     
   </span>
   
@@ -603,7 +624,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin fetch2
+    fetch plugin (2)
     
   </span>
   
@@ -624,7 +645,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin git deploy
+    git_deploy plugin
     
   </span>
   
@@ -645,7 +666,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin git publish
+    git_publish plugin
     
   </span>
   
@@ -687,7 +708,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin minio
+    minio plugin
     
   </span>
   
@@ -708,7 +729,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin mkdocs material
+    mkdocs_material plugin
     
   </span>
   
@@ -729,7 +750,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin mkdocs material config
+    mkdocs_material_config plugin
     
   </span>
   
@@ -759,7 +780,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin npm
+    npm plugin
     
   </span>
   
@@ -781,7 +802,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin pandoc
+    pandoc plugin
     
   </span>
   
@@ -802,7 +823,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin pikchr
+    pikchr plugin
     
   </span>
   
@@ -823,7 +844,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin plantuml
+    plantuml plugin
     
   </span>
   
@@ -844,7 +865,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin skip
+    skip plugin
     
   </span>
   
@@ -931,10 +952,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_34" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_35" >
         
           
-          <label class="md-nav__link" for="__nav_34" id="__nav_34_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_35" id="__nav_35_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -946,8 +967,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_34_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_34">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_35_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_35">
             <span class="md-nav__icon md-icon"></span>
             Tutorial
           </label>
@@ -1041,12 +1062,7 @@
   
 
 
-<p>Source file: <code>new/npm.yml</code></p>
 <h1 id="npm-plugin">npm plugin</h1>
-<details>
-<summary>Details</summary>
-<p>
-
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">docker</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;node:16&quot;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">steps</span><span class="p">:</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Instalar</span><span class="nv"> </span><span class="s">dependências&quot;</span>
@@ -1060,9 +1076,6 @@
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="nt">bash</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">      </span><span class="no">npm run build</span>
 </code></pre></div>
-
-</p>
-</details>
 
 
 

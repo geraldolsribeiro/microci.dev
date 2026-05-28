@@ -20,7 +20,7 @@
     
     
       
-        <title>Plugin clang format config - microCI Documentation</title>
+        <title>clang-format_config plugin - microCI Documentation</title>
       
     
     
@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#clang-format_config-plugin" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -100,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Plugin clang format config
+              clang-format_config plugin
             
           </span>
         </div>
@@ -447,11 +452,32 @@
   
   
     <li class="md-nav__item">
+      <a href="../plugin_bash/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    bash plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../plugin_beamer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Plugin beamer
+    beamer plugin
     
   </span>
   
@@ -472,7 +498,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin clang format
+    clang-format plugin
     
   </span>
   
@@ -495,12 +521,14 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Plugin clang format config
+    clang-format_config plugin
     
   </span>
   
@@ -522,7 +550,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin clang tidy
+    clang-tidy plugin
     
   </span>
   
@@ -543,7 +571,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin cppcheck
+    cppcheck plugin
     
   </span>
   
@@ -585,7 +613,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin fetch
+    fetch plugin
     
   </span>
   
@@ -606,7 +634,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin fetch2
+    fetch plugin (2)
     
   </span>
   
@@ -627,7 +655,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin git deploy
+    git_deploy plugin
     
   </span>
   
@@ -648,7 +676,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin git publish
+    git_publish plugin
     
   </span>
   
@@ -690,7 +718,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin minio
+    minio plugin
     
   </span>
   
@@ -711,7 +739,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin mkdocs material
+    mkdocs_material plugin
     
   </span>
   
@@ -732,7 +760,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin mkdocs material config
+    mkdocs_material_config plugin
     
   </span>
   
@@ -753,7 +781,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin npm
+    npm plugin
     
   </span>
   
@@ -774,7 +802,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin pandoc
+    pandoc plugin
     
   </span>
   
@@ -795,7 +823,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin pikchr
+    pikchr plugin
     
   </span>
   
@@ -816,7 +844,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin plantuml
+    plantuml plugin
     
   </span>
   
@@ -837,7 +865,7 @@
         
   
   <span class="md-ellipsis">
-    Plugin skip
+    skip plugin
     
   </span>
   
@@ -924,10 +952,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_34" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_35" >
         
           
-          <label class="md-nav__link" for="__nav_34" id="__nav_34_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_35" id="__nav_35_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -939,8 +967,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_34_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_34">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_35_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_35">
             <span class="md-nav__icon md-icon"></span>
             Tutorial
           </label>
@@ -1014,6 +1042,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -1032,13 +1062,7 @@
   
 
 
-  <h1>Plugin clang format config</h1>
-
-<p>Source file: <code>new/clang-format_config.yml</code></p>
-<details>
-<summary>Details</summary>
-<p>
-
+<h1 id="clang-format_config-plugin">clang-format_config plugin</h1>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nn">---</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">BasedOnStyle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Google</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">TabWidth</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;2&#39;</span>
@@ -1047,9 +1071,6 @@
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nn">...</span>
 </code></pre></div>
-
-</p>
-</details>
 
 
 
