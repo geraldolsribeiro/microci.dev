@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../04_environmen_variables/">
+        <link rel="prev" href="../20_plugin_clang-tidy/">
       
       
-        <link rel="next" href="../10_help/">
+        <link rel="next" href="../20_plugin_docmd/">
       
       
       <link rel="icon" href="../assets/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Activity diagram - microCI Documentation</title>
+        <title>cppcheck Plugin Documentation (cppcheck) - microCI Documentation</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#activity-diagram" class="md-skip">
+        <a href="#cppcheck-plugin-documentation-cppcheck" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Activity diagram
+              cppcheck Plugin Documentation (cppcheck)
             
           </span>
         </div>
@@ -323,31 +323,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Activity diagram
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../10_activity_diagram/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -357,92 +336,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Example">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generate-the-plantuml-description-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generate the Plantuml description file
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#generate-images-from-the-description-files" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generate images from the description files
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      Output
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Output">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#main-pipeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      Main pipeline
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alternative-pipeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      Alternative pipeline
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -577,10 +470,31 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../20_plugin_cppcheck/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    cppcheck Plugin Documentation (cppcheck)
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -590,6 +504,161 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✨ Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deep-memory-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deep Memory Safety
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bi-directional-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bi-directional Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-compliance-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security &amp; Compliance Standards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extensive-language-support-c11-c14-c17-and-partial-support-for-c20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extensive Language Support (C++11, C++14, C++17, and partial support for C++20)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-agnostic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Agnostic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seamless-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seamless Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Setup &amp; Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ Setup & Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💻 Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-file-microciyml-excerpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration File: .microCI.yml (Excerpt)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-of-analysis-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary of Analysis Scope
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1170,28 +1239,73 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
+      🚀 Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Example">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✨ Features">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#generate-the-plantuml-description-file" class="md-nav__link">
+  <a href="#deep-memory-safety" class="md-nav__link">
     <span class="md-ellipsis">
-      Generate the Plantuml description file
+      Deep Memory Safety
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#generate-images-from-the-description-files" class="md-nav__link">
+  <a href="#bi-directional-analysis" class="md-nav__link">
     <span class="md-ellipsis">
-      Generate images from the description files
+      Bi-directional Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-compliance-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security &amp; Compliance Standards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extensive-language-support-c11-c14-c17-and-partial-support-for-c20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extensive Language Support (C++11, C++14, C++17, and partial support for C++20)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-agnostic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Agnostic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seamless-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seamless Integration
     </span>
   </a>
   
@@ -1203,28 +1317,52 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
+  <a href="#setup-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Output
+      ⚙️ Setup &amp; Configuration
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Output">
+    <nav class="md-nav" aria-label="⚙️ Setup & Configuration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#main-pipeline" class="md-nav__link">
+  <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Main pipeline
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💻 Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-file-microciyml-excerpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration File: .microCI.yml (Excerpt)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#alternative-pipeline" class="md-nav__link">
+  <a href="#summary-of-analysis-scope" class="md-nav__link">
     <span class="md-ellipsis">
-      Alternative pipeline
+      Summary of Analysis Scope
     </span>
   </a>
   
@@ -1254,41 +1392,114 @@
   
 
 
-<h1 id="activity-diagram">Activity diagram</h1>
-<p>An activity diagram describes a workflow or process: the steps, the order they
-happen in, and the decisions and parallel paths along the way. It's well suited
-to business processes, algorithms, and anything that flows from a start to an
-end.</p>
-<p>MicroCI can generate activity diagrams for the current workflow via option <code>--activity-diagram</code>:</p>
-<h2 id="example">Example</h2>
-<h3 id="generate-the-plantuml-description-file">Generate the Plantuml description file</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>microCI<span class="w"> </span>--activity-diagram<span class="w"> </span>&gt;<span class="w"> </span>docs/diagrams/microCI_activity_diagram.puml
+<h1 id="cppcheck-plugin-documentation-cppcheck">cppcheck Plugin Documentation (cppcheck)</h1>
+<h2 id="overview">🚀 Overview</h2>
+<p>The <strong>cppcheck</strong> plugin integrates powerful static analysis into the <strong>microCI</strong> pipeline, allowing developers to enforce high levels of code quality, memory safety, and security compliance directly within their CI/CD workflow. Instead of relying on runtime tests, this plugin analyzes C++ source code at compile time, identifying potential bugs, anti-patterns, and security vulnerabilities before the code ever reaches production or even local testing environments.</p>
+<p>By making static analysis a mandatory step in <strong>microCI</strong>, teams can establish an automated quality gate that significantly improves overall code robustness and maintainability.</p>
+<h2 id="features">✨ Features</h2>
+<h3 id="deep-memory-safety">Deep Memory Safety</h3>
+<p><strong>Description:</strong> cppcheck rigorously detects common memory management errors, such as use-after-free, double deletion, and buffer overflows.
+<strong>Use Case:</strong> Essential for mission-critical systems or any codebase handling complex resource lifetimes where traditional testing might miss subtle memory leaks or corruption issues.</p>
+<h3 id="bi-directional-analysis">Bi-directional Analysis</h3>
+<p><strong>Description:</strong> Unlike tools that only check forward dependencies (A calls B), cppcheck can analyze data flow both into and out of functions, providing a much more complete understanding of variable usage and potential state changes throughout the program.
+<strong>Use Case:</strong> Identifying subtle bugs where an input parameter is modified unexpectedly or where side effects occur across function boundaries.</p>
+<h3 id="security-compliance-standards">Security &amp; Compliance Standards</h3>
+<p><strong>Description:</strong> The plugin helps enforce coding standards that align with industry best practices and security guidelines (e.g., detecting insecure usage of standard library functions, potential SQL injection vectors, etc.).
+<strong>Use Case:</strong> Ensuring adherence to internal compliance policies or preparing code for environments requiring high levels of security auditing (e.g., financial, medical).</p>
+<h3 id="extensive-language-support-c11-c14-c17-and-partial-support-for-c20">Extensive Language Support (C++11, C++14, C++17, and partial support for C++20)</h3>
+<p><strong>Description:</strong> Provides comprehensive checking across multiple modern C++ standards, allowing development teams to gradually upgrade their codebase while maintaining quality assurance.
+<strong>Use Case:</strong> Facilitating large-scale code modernization efforts by validating syntax and patterns specific to newer language features.</p>
+<h3 id="environment-agnostic">Environment Agnostic</h3>
+<p><strong>Description:</strong> The plugin's core logic is decoupled from the immediate execution environment details (like OS or specific build tool versions), making it highly portable across different CI runners.
+<strong>Use Case:</strong> Supporting development teams that use a diverse set of build environments or need consistency regardless of underlying infrastructure changes.</p>
+<h3 id="seamless-integration">Seamless Integration</h3>
+<p><strong>Description:</strong> Designed specifically for <strong>microCI</strong>, integration is achieved via declarative configuration in the <code>.microCI.yml</code> file, making it as simple to enable as any other plugin step.
+<strong>Use Case:</strong> Rapid setup and maintenance of CI/CD pipelines without needing deep knowledge of underlying static analysis tooling command lines.</p>
+<h2 id="setup-configuration">⚙️ Setup &amp; Configuration</h2>
+<p>To utilize the <code>cppcheck</code> plugin, you must define its execution details within a step in your <code>.microCI.yml</code>. The configuration allows fine-tuning of the analysis scope, language standard, and specific checks to be performed.</p>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Required?</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>name</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">A descriptive name for the CI step (e.g., "cppcheck Code Analysis").</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Used for reporting purposes within <strong>microCI</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>plugin.name</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">The identifier used to invoke this plugin.</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Must be set to <code>"cppcheck"</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>include</code></td>
+<td style="text-align: left;">List[String]</td>
+<td style="text-align: left;">A list of directories or files containing source code that must be analyzed.</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">All relevant source paths should be listed here.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>source</code></td>
+<td style="text-align: left;">List[String]</td>
+<td style="text-align: left;">Alternative listing for source folders/files, potentially used for multiple analysis passes.</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Generally use <code>include</code> unless specific staging is required.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>platform</code></td>
+<td style="text-align: left;">String</td>
+<td style="text-align: left;">The target platform or architecture for which the code is being compiled (e.g., <code>unix64</code>, <code>win32</code>).</td>
+<td style="text-align: left;">Recommended</td>
+<td style="text-align: left;">Helps narrow down environment-specific checks.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Options</strong></td>
+<td style="text-align: left;">Dictionary/List[String]</td>
+<td style="text-align: left;">Specific command-line options to pass directly to cppcheck.</td>
+<td style="text-align: left;">Optional</td>
+<td style="text-align: left;">Includes parameters like <code>--std=c++17</code> or specific job limits (<code>-j 4</code>).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples">💻 Examples</h2>
+<p>The following example demonstrates how to use the <strong>cppcheck</strong> plugin within a standard <strong>microCI</strong> workflow, performing a comprehensive code check on source and test directories while enforcing C++ standards.</p>
+<h3 id="configuration-file-microciyml-excerpt">Configuration File: <code>.microCI.yml</code> (Excerpt)</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">steps</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;C++</span><span class="nv"> </span><span class="s">Code</span><span class="nv"> </span><span class="s">Verification&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Check</span><span class="nv"> </span><span class="s">C++</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">generate</span><span class="nv"> </span><span class="s">HTML</span><span class="nv"> </span><span class="s">report</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">static</span><span class="nv"> </span><span class="s">analysis.&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">plugin</span><span class="p">:</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;cppcheck&quot;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="nt">options</span><span class="p">:</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="c1"># Use clang as the analyzer, enforcing C++17 standard</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;--clang=clang-13&quot;</span><span class="w"> </span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;--std=c++17&quot;</span><span class="w">       </span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;--bug-hunting&quot;</span><span class="w">     </span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">      </span><span class="nt">include</span><span class="p">:</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;include&quot;</span><span class="w">           </span><span class="c1"># Analyze public header files</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;src&quot;</span><span class="w">               </span><span class="c1"># Analyze source implementation files</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;test&quot;</span><span class="w">              </span><span class="c1"># Analyze test cases for correctness issues</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">      </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;unix64&quot;</span><span class="w"> </span><span class="c1"># Target environment is Unix 64-bit</span>
 </code></pre></div>
-<h3 id="generate-images-from-the-description-files">Generate images from the description files</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">steps</span><span class="p">:</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Build</span><span class="nv"> </span><span class="s">diagrams</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">plantuml&quot;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Build</span><span class="nv"> </span><span class="s">diagrams</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">textual</span><span class="nv"> </span><span class="s">description&quot;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">plugin</span><span class="p">:</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;plantuml&quot;</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="nt">source</span><span class="p">:</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;docs/diagrams/*.puml&quot;</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">png</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">      </span><span class="nt">config</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;docs/diagrams/skinparams.iuml&quot;</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">      </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/microci_workspace/docs/diagrams&quot;</span>
-</code></pre></div>
-<h2 id="output">Output</h2>
-<p>There are two king of steps:</p>
+<h3 id="summary-of-analysis-scope">Summary of Analysis Scope</h3>
 <ul>
-<li><strong>main</strong> step: list of sequential steps executed on the <strong>main</strong> pipeline</li>
-<li><strong>only</strong> step: alternative single step executed alone</li>
+<li><strong>Target Codebase:</strong> The plugin analyzes code in <code>include/</code>, <code>src/</code>, and <code>test/</code>.</li>
+<li><strong>Standards enforced:</strong> C++17 (via <code>options</code>).</li>
+<li><strong>Output:</strong> A detailed report summarizing all detected issues, categorized by severity.</li>
 </ul>
-<p>The diagrams below are generated automatically by <strong>microCI</strong> based on
-<a href="https://raw.githubusercontent.com/geraldolsribeiro/microCI/refs/heads/master/.microCI.yml"><code>.microCI.yml</code></a> file.</p>
-<h3 id="main-pipeline">Main pipeline</h3>
-<p><img alt="Main pipeline" src="../diagrams/microCI_activity_diagram.png" /></p>
-<h3 id="alternative-pipeline">Alternative pipeline</h3>
-<p><img alt="Alternative step" src="../diagrams/microCI_activity_diagram_001.png" /></p>
-<p><img alt="Alternative step" src="../diagrams/microCI_activity_diagram_002.png" /></p>
+<hr />
+<p><em>This documentation was generated by the Documentation Generator Skill.</em></p>
 
 
 

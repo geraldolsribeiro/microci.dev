@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../04_environmen_variables/">
+        <link rel="prev" href="../20_plugin_cppcheck/">
       
       
-        <link rel="next" href="../10_help/">
+        <link rel="next" href="../20_plugin_doxygen/">
       
       
       <link rel="icon" href="../assets/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Activity diagram - microCI Documentation</title>
+        <title>📑 The docmd Plugin - microCI Documentation</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#activity-diagram" class="md-skip">
+        <a href="#the-docmd-plugin" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Activity diagram
+              📑 The docmd Plugin
             
           </span>
         </div>
@@ -323,31 +323,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Activity diagram
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../10_activity_diagram/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -357,92 +336,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Example">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generate-the-plantuml-description-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generate the Plantuml description file
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#generate-images-from-the-description-files" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generate images from the description files
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    <span class="md-ellipsis">
-      Output
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Output">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#main-pipeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      Main pipeline
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alternative-pipeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      Alternative pipeline
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -598,10 +491,31 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../20_plugin_docmd/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    📑 The docmd Plugin
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -611,6 +525,110 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#source-code-documentation-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Source Code Documentation Extraction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup &amp; Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup & Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 Configuration Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-configuration-microciyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Configuration (.microCI.yml)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1170,28 +1188,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Example
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Example">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generate-the-plantuml-description-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generate the Plantuml description file
+      Overview
     </span>
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Features">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#generate-images-from-the-description-files" class="md-nav__link">
+  <a href="#source-code-documentation-extraction" class="md-nav__link">
     <span class="md-ellipsis">
-      Generate images from the description files
+      📚 Source Code Documentation Extraction
     </span>
   </a>
   
@@ -1203,28 +1221,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
+  <a href="#setup-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Output
+      Setup &amp; Configuration
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Output">
+    <nav class="md-nav" aria-label="Setup & Configuration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#main-pipeline" class="md-nav__link">
+  <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
-      Main pipeline
+      ⚙️ Installation
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#alternative-pipeline" class="md-nav__link">
+  <a href="#configuration-parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Alternative pipeline
+      📄 Configuration Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-configuration-microciyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Configuration (.microCI.yml)
     </span>
   </a>
   
@@ -1232,6 +1259,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
   
 </li>
       
@@ -1254,41 +1290,101 @@
   
 
 
-<h1 id="activity-diagram">Activity diagram</h1>
-<p>An activity diagram describes a workflow or process: the steps, the order they
-happen in, and the decisions and parallel paths along the way. It's well suited
-to business processes, algorithms, and anything that flows from a start to an
-end.</p>
-<p>MicroCI can generate activity diagrams for the current workflow via option <code>--activity-diagram</code>:</p>
-<h2 id="example">Example</h2>
-<h3 id="generate-the-plantuml-description-file">Generate the Plantuml description file</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>microCI<span class="w"> </span>--activity-diagram<span class="w"> </span>&gt;<span class="w"> </span>docs/diagrams/microCI_activity_diagram.puml
+<h1 id="the-docmd-plugin">📑 The <strong>docmd</strong> Plugin</h1>
+<h2 id="overview">Overview</h2>
+<p>The <strong>docmd</strong> plugin is a powerful utility designed to streamline and automate the process of generating comprehensive technical documentation directly from your project's source code base. Instead of relying on manual doc comments or scattered README files, <strong>docmd</strong> analyzes specified source directories and extracts structured information—such as function signatures, class definitions, and inline descriptions—and transforms it into clean, maintainable Markdown documents.</p>
+<p>This plugin is essential for any project aiming to keep its documentation synchronized with its codebase, significantly reducing technical debt and improving the developer onboarding experience within a <strong>microCI</strong> environment.</p>
+<h2 id="features">Features</h2>
+<p>The core capability of this plugin is simple yet profound: it extracts documentation from source code to markdown files.</p>
+<h3 id="source-code-documentation-extraction">📚 Source Code Documentation Extraction</h3>
+<p><strong>Description:</strong> This feature analyzes predefined directories (e.g., <code>src/</code>, <code>lib/</code>) and identifies code constructs that contain doc comments or specific metadata tags. It then parses these structures, sanitizes them, and formats the resulting information into structured Markdown files. The plugin supports various languages (YAML, C++, Python, Rust, etc.) for extraction.
+<strong>Use Case:</strong> Ideal for large codebases where manual documentation is tedious. You can enforce a standard level of documentation coverage across all modules simply by integrating <strong>docmd</strong> into your build pipeline and defining the required language formats.</p>
+<h2 id="setup-configuration">Setup &amp; Configuration</h2>
+<h3 id="installation">⚙️ Installation</h3>
+<p>The <code>docmd</code> plugin should be added to your main CI/CD configuration file, typically <code>.microCI.yml</code>. No external dependencies beyond the core <strong>microCI</strong> runner are generally required, assuming source code analysis tools are available in the execution environment path and language-specific parsers are configured.</p>
+<h3 id="configuration-parameters">📄 Configuration Parameters</h3>
+<p>The primary configuration is handled within the <code>plugin</code> block of your workflow step. The plugin expects input parameters specifying what to analyze and where to place the output.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Required?</th>
+<th style="text-align: left;">Example Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>toc</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">Controls whether a Table of Contents is generated in the markdown file.</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;"><code>false</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>show_details</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">Enables/disables showing detailed HTML tags within the documentation output.</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;"><code>false</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>show_source</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">Controls whether source filenames should be printed alongside documentation blocks.</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;"><code>false</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>show_banner</code></td>
+<td style="text-align: left;">Boolean</td>
+<td style="text-align: left;">Enables/disables a header banner on the generated document.</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;"><code>true</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>items</code></td>
+<td style="text-align: left;">Array<String></td>
+<td style="text-align: left;">A list of language-specific items to process, detailing paths and desired output filenames.</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;"><code>['yaml', 'new/bash.yml', 'docs/plugin_bash.md']</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-configuration-microciyml">Example Configuration (<code>.microCI.yml</code>)</h3>
+<p>To enable and configure <strong>docmd</strong> for a multi-format project setup:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">steps</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="c1"># The plugin processes multiple items, each defined by language, source path, and output file name.</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Extract</span><span class="nv"> </span><span class="s">comprehensive</span><span class="nv"> </span><span class="s">documentation&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">      </span><span class="nt">plugin</span><span class="p">:</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;docmd&quot;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="nt">toc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">          </span><span class="c1"># Disable Table of Contents generation for cleaner API docs</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="nt">show_details</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"> </span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="nt">show_source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">   </span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="nt">show_banner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">   </span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="nt">items</span><span class="p">:</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">&#39;yaml&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;new/bash.yml&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;docs/plugin_bash.md&#39;</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w"> </span><span class="c1"># Processes YAML files</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">&#39;c++&#39;</span><span class="p p-Indicator">,</span><span class="w">  </span><span class="s">&#39;input_filename.cpp&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;output_filename_cpp.md&#39;</span><span class="w"> </span><span class="p p-Indicator">]</span><span class="w"> </span><span class="c1"># Processes C++ headers</span>
 </code></pre></div>
-<h3 id="generate-images-from-the-description-files">Generate images from the description files</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">steps</span><span class="p">:</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Build</span><span class="nv"> </span><span class="s">diagrams</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">plantuml&quot;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Build</span><span class="nv"> </span><span class="s">diagrams</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">textual</span><span class="nv"> </span><span class="s">description&quot;</span>
+<h2 id="examples">Examples</h2>
+<p>This section demonstrates how to integrate <strong>docmd</strong> into your CI/CD pipeline using the standard <code>.microCI.yml</code> structure, utilizing multiple language parsers and specifying outputs per file type.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">steps</span><span class="p">:</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Extract</span><span class="nv"> </span><span class="s">documentation&quot;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Extract</span><span class="nv"> </span><span class="s">documentation</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">code</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">markdown</span><span class="nv"> </span><span class="s">file&quot;</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">plugin</span><span class="p">:</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;plantuml&quot;</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="nt">source</span><span class="p">:</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;docs/diagrams/*.puml&quot;</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">png</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">      </span><span class="nt">config</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;docs/diagrams/skinparams.iuml&quot;</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">      </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/microci_workspace/docs/diagrams&quot;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;docmd&quot;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="nt">toc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">          </span><span class="c1"># Enable/Disable table of content</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="nt">show_details</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"> </span><span class="c1"># Enable/Disable html tag details</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">      </span><span class="nt">show_source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w">  </span><span class="c1"># Enable/Disable source filename print</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">      </span><span class="nt">show_banner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">   </span><span class="c1"># Enable/Disable banner</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">      </span><span class="nt">items</span><span class="p">:</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">&#39;yaml&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;new/bash.yml&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;docs/plugin_bash.md&#39;</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">&#39;yaml&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;new/skip.yml&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;docs/plugin_skip.md&#39;</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">&#39;c++&#39;</span><span class="p p-Indicator">,</span><span class="w">  </span><span class="s">&#39;input_filename.cpp&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;output_filename_cpp.md&#39;</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">        </span><span class="c1"># Available formats:</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">        </span><span class="c1"># `bash`, `c++`, `coffee`, `conf`, `grdb`, `makefile`, `nginx`, `python`, `ruby`, `rust`, `scss`, `systemd`, `vim`, `yaml`</span>
 </code></pre></div>
-<h2 id="output">Output</h2>
-<p>There are two king of steps:</p>
-<ul>
-<li><strong>main</strong> step: list of sequential steps executed on the <strong>main</strong> pipeline</li>
-<li><strong>only</strong> step: alternative single step executed alone</li>
-</ul>
-<p>The diagrams below are generated automatically by <strong>microCI</strong> based on
-<a href="https://raw.githubusercontent.com/geraldolsribeiro/microCI/refs/heads/master/.microCI.yml"><code>.microCI.yml</code></a> file.</p>
-<h3 id="main-pipeline">Main pipeline</h3>
-<p><img alt="Main pipeline" src="../diagrams/microCI_activity_diagram.png" /></p>
-<h3 id="alternative-pipeline">Alternative pipeline</h3>
-<p><img alt="Alternative step" src="../diagrams/microCI_activity_diagram_001.png" /></p>
-<p><img alt="Alternative step" src="../diagrams/microCI_activity_diagram_002.png" /></p>
 
 
 
