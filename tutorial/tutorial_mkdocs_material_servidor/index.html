@@ -18,7 +18,7 @@
     
     
       
-        <title>Tutorial mkdocs servidor - microCI Documentation</title>
+        <title>Tutorial mkdocs server - microCI Documentation</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tutorial-mkdocs-servidor" class="md-skip">
+        <a href="#tutorial-mkdocs-server" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tutorial mkdocs servidor
+              Tutorial mkdocs server
             
           </span>
         </div>
@@ -412,7 +412,7 @@
         
   
   <span class="md-ellipsis">
-    20 plugin clang format
+    clang-format plugin
     
   </span>
   
@@ -538,28 +538,7 @@
         
   
   <span class="md-ellipsis">
-    20 plugin fetch
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../20_plugin_fetch2/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    20 plugin fetch2
+    Fetch Plugin
     
   </span>
   
@@ -748,7 +727,7 @@
         
   
   <span class="md-ellipsis">
-    20 plugin pandoc
+    pandoc plugin
     
   </span>
   
@@ -963,10 +942,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_36" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_35" checked>
         
           
-          <label class="md-nav__link" for="__nav_36" id="__nav_36_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_35" id="__nav_35_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -978,8 +957,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_36_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_36">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_35_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_35">
             <span class="md-nav__icon md-icon"></span>
             Tutorial
           </label>
@@ -1027,7 +1006,7 @@
           
   
   <span class="md-ellipsis">
-    Tutorial mkdocs servidor
+    Tutorial mkdocs server
     
   </span>
   
@@ -1039,7 +1018,7 @@
         
   
   <span class="md-ellipsis">
-    Tutorial mkdocs servidor
+    Tutorial mkdocs server
     
   </span>
   
@@ -1062,9 +1041,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introducao" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Introdução
+      Introduction
     </span>
   </a>
   
@@ -1113,9 +1092,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introducao" class="md-nav__link">
+  <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Introdução
+      Introduction
     </span>
   </a>
   
@@ -1140,104 +1119,83 @@
   
 
 
-<h1 id="tutorial-mkdocs-servidor">Tutorial mkdocs servidor</h1>
-<h2 id="introducao">Introdução</h2>
-<p>Depois de executar o <code>microCI</code> localmente no tutorial anterrior, podemos
-começar a automação da pipeline através de webhooks e execução remota.</p>
-<p>Neste tutorial será mostrado como, a partir de um <code>commit</code> no repositório de
-trabalho, é gerada a versão final e disponibilização em produção. </p>
-<p>A execução se dará conforme a figura abaixo:</p>
+<h1 id="tutorial-mkdocs-server">Tutorial mkdocs server</h1>
+<h2 id="introduction">Introduction</h2>
+<p>After running <code>microCI</code> locally in the previous tutorial, we can start automating the pipeline through webhooks and remote execution.</p>
+<p>This tutorial shows how a final version is generated and deployed to production from a <code>commit</code> in the working repository.</p>
+<p>The execution will follow the figure below:</p>
 <p><img alt="Flowchart" src="../awesome_flowchart.png" /></p>
-<p><strong>Evento inicial:</strong> O desenvolvedor atualiza a documentação realiza um <code>commit</code>
-e envia para o servidor git.</p>
-<p><strong>Passo 1:</strong> O servidor git recebe o evento de <code>push</code> com os <code>commits</code> do
-usuário e dispara um webhook vinculado ao repositório.</p>
+<p><strong>Initial event:</strong> The developer updates the documentation, makes a <code>commit</code>, and pushes it to the Git server.</p>
+<p><strong>Step 1:</strong> The Git server receives the <code>push</code> event with the user's <code>commits</code> and triggers a webhook linked to the repository.</p>
 <blockquote>
-<p>Nota: o evento de <code>push</code> ocorre uma única vez mesmo que este contenha vários
-<code>commits</code>.</p>
+<p>Note: the <code>push</code> event happens only once even if it contains multiple <code>commits</code>.</p>
 </blockquote>
-<p><strong>Passo 2:</strong> O servidor de webhook recebe as informações do último <code>commit</code> e
-executa um script vinculado ao webhook.</p>
+<p><strong>Step 2:</strong> The webhook server receives the information for the latest <code>commit</code> and runs the script linked to the webhook.</p>
 <blockquote>
-<p>Nota: o servidor de <code>webhook</code> utilizado neste exemplo pode ser obtido
-em <a href="https://github.com/adnanh/webhook">https://github.com/adnanh/webhook</a>.</p>
+<p>Note: the <code>webhook</code> server used in this example can be found at <a href="https://github.com/adnanh/webhook">https://github.com/adnanh/webhook</a>.</p>
 </blockquote>
-<p>Abaixo estão a declaração dois webhooks usados neste tutorial:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Disparado no passo 2</span>
+<p>Below is the declaration of the two webhooks used in this tutorial:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Triggered in step 2</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;microCI_awesome&quot;</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">execute-command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/bin/microCI.sh&quot;</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">command-working-directory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/opt/microCI/repos/awesome/&quot;</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># Disparado no passo 5</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># Triggered in step 5</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;microCI_awesome_deploy&quot;</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nt">execute-command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/bin/microCI.sh&quot;</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nt">command-working-directory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/opt/microCI/repos/awesome_deploy/&quot;</span>
 </code></pre></div>
 <blockquote>
-<p>Nota: todos os webhooks executam o mesmo script</p>
+<p>Note: all webhooks run the same script</p>
 </blockquote>
-<p><strong>Passo 3:</strong> Uma implementação mínima do script de adaptação do webhook para o microCI 
-pode ser vista a seguir:</p>
+<p><strong>Step 3:</strong> A minimal implementation of the webhook adapter script for microCI can be seen below:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="ch">#!/bin/bash</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># Arquivo microCI.sh</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># Acrescente suas personalizações aqui</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># microCI.sh file</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># Add your customizations here</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;.git&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span>git<span class="w"> </span>pull
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">fi</span>
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1"># Este comando é executado no caminho do repositório</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1"># This command runs in the repository directory</span>
 <a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>microCI<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
 </code></pre></div>
 <blockquote>
-<p>Nota: O procedimento é idêntico ao executado localmente: o <code>microCI</code> lê
-a configuração do arquivo <code>.microCI.yml</code> e executa os passos descritos.</p>
+<p>Note: The procedure is identical to the local run: <code>microCI</code> reads the configuration from <code>.microCI.yml</code> and executes the described steps.</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Arquivo .microCI.yml do repositório awesome</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># .microCI.yml file for the awesome repository</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nn">---</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nt">steps</span><span class="p">:</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Construir</span><span class="nv"> </span><span class="s">documentação</span><span class="nv"> </span><span class="s">em</span><span class="nv"> </span><span class="s">formato</span><span class="nv"> </span><span class="s">HTML&quot;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Documentação</span><span class="nv"> </span><span class="s">do</span><span class="nv"> </span><span class="s">projeto&quot;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Build</span><span class="nv"> </span><span class="s">documentation</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">HTML&quot;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Project</span><span class="nv"> </span><span class="s">documentation&quot;</span>
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nt">plugin</span><span class="p">:</span>
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;mkdocs_material&quot;</span>
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">      </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;build&quot;</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Publicar</span><span class="nv"> </span><span class="s">HTML</span><span class="nv"> </span><span class="s">para</span><span class="nv"> </span><span class="s">repositório</span><span class="nv"> </span><span class="s">git&quot;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Publish</span><span class="nv"> </span><span class="s">HTML</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">Git</span><span class="nv"> </span><span class="s">repository&quot;</span>
 <a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="nt">ssh</span><span class="p">:</span>
 <a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">      </span><span class="nt">copy_from</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${HOME}/.ssh&quot;</span>
 <a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">      </span><span class="nt">copy_to</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/root/.ssh&quot;</span>
 <a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="nt">plugin</span><span class="p">:</span>
 <a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;git_publish&quot;</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">      </span><span class="nt">git_url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;git@nome_do_servidor.com.br:awesome_deploy.git&quot;</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">      </span><span class="nt">git_url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;git@your-server-name.com:awesome_deploy.git&quot;</span>
 <a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">      </span><span class="nt">copy_to</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/deploy&quot;</span>
 <a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">      </span><span class="nt">copy_from</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;site&quot;</span>
 <a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">      </span><span class="nt">clean_before</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
-<p>O plugin <code>mkdocs_material</code> com a ação <code>build</code> lê os arquivos markdown
-e constroi a documentação em formato HTML e a salva na pasta <code>site</code> para ser
-utilizada no próximo passo.</p>
-<p>O plugin <code>git_publish</code> clona o repositório apontado por <code>git_url</code> na pasta
-<code>/deploy</code>, então copia o conteúdo da pasta <code>site</code> para a pasta <code>/deploy</code>,
-dentro do container, e faz o <code>commit</code> para atualizando o repostório.</p>
-<p><strong>Passo 4</strong>: O repositório <code>awesome_deploy</code> recebe o <code>post</code> lançado pelo
-plugin <code>git_publish</code> no passo anterior e dispara outro webhook.</p>
-<p><strong>Passo 5:</strong> O servidor de webhook recebe as informações do último <code>commit</code> e
-executa um script vinculado ao webhook.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Disparado no passo 5</span>
+<p>The <code>mkdocs_material</code> plugin with the <code>build</code> action reads the Markdown files, builds the documentation as HTML, and saves it in the <code>site</code> folder for use in the next step.</p>
+<p>The <code>git_publish</code> plugin clones the repository specified by <code>git_url</code> into <code>/deploy</code>, then copies the contents of the <code>site</code> folder into <code>/deploy</code> inside the container, and commits the update to the repository.</p>
+<p><strong>Step 4</strong>: The <code>awesome_deploy</code> repository receives the <code>post</code> sent by the <code>git_publish</code> plugin in the previous step and triggers another webhook.</p>
+<p><strong>Step 5:</strong> The webhook server receives the information for the latest <code>commit</code> and runs the script linked to the webhook.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Triggered in step 5</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;microCI_awesome_deploy&quot;</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">execute-command</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/bin/microCI.sh&quot;</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nt">command-working-directory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/opt/microCI/repos/awesome_deploy/&quot;</span>
 </code></pre></div>
 <blockquote>
-<p>Nota: executa o procedimento igual ao do passo 2, mas desta vez na pasta do
-repositório <code>awesome_deploy</code>.</p>
+<p>Note: it performs the same procedure as step 2, but this time in the <code>awesome_deploy</code> repository folder.</p>
 </blockquote>
-<p><strong>Passo 6:</strong> O <code>microCI</code> executa o plugin <code>git_deploy</code> que realiza o <code>checkout</code>
-do repositório na pasta de implantação. Para garantir que o histórico com os
-commits antigos não estarão disponíveis em produção o checkout é realizado de
-forma dividida, ficando o histórico (<code>.git</code>) em uma pasta privada e somente os
-arquivos do último <code>commit</code> no caminho de <code>deploy</code> especificado.</p>
-<p><strong>Passo 7:</strong> A pasta de <code>deploy</code> atualizada no passo anterior está disponível
-em produção.</p>
+<p><strong>Step 6:</strong> <code>microCI</code> runs the <code>git_deploy</code> plugin, which checks out the repository into the deployment folder. To ensure older commits are not available in production, the checkout is split: the history (<code>.git</code>) stays in a private folder, and only the files from the latest <code>commit</code> are placed in the specified <code>deploy</code> path.</p>
+<p><strong>Step 7:</strong> The updated <code>deploy</code> folder from the previous step is now available in production.</p>
 
 
 
