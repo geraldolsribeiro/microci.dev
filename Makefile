@@ -1,21 +1,22 @@
-PLUGINS_TXT=$(addprefix ../help/,$(subst .md,.txt,$(subst 20_plugin_,,$(wildcard 20_plugin_*.md))))
+# Convert ???_plugin_name.md -> ../help/name.txt
+PLUGINS_TXT=$(foreach f,$(wildcard ???_plugin_*.md),../help/$(word 2,$(subst _plugin_, ,$(basename $(notdir $(f))))).txt)
 
 .PHONY: all
 all: \
 	$(PLUGINS_TXT) \
-	10_help.md \
+	120_help.md \
 	microCI_activity_diagram.puml
 
 GLOW_STYLE=tokyo-night
 GLOW_STYLE=dracula
 
-../help/%.txt: 20_plugin_%.md
+../help/%.txt: ???_plugin_%.md
 	CLICOLOR_FORCE=1 glow --width 100 --style $(GLOW_STYLE) $< > $@
 
 ../bin/microCI:
 	$(MAKE) -C ../src/
 
-10_help.md: ../bin/microCI
+120_help.md: ../bin/microCI
 	echo "# microCI Help" > $@
 	echo "" >> $@
 	echo "The basic usage can be obtained by passing the \`--help\` option:" >> $@
