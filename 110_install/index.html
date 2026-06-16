@@ -1440,6 +1440,7 @@
 </ul>
 <p>These tools are necessary because microCI generates Bash and expects a minimal runtime layer to execute portable steps consistently across machines.</p>
 <p>At runtime, the simplicity stays the same: <code>microCI | bash</code>.</p>
+<p>To run only specific steps, use <code>-O/--only</code> for a single named step or <code>-N/--number</code> with one or more comma-separated step numbers, such as <code>microCI --number 2,3,5</code>.</p>
 <h2 id="install">Install</h2>
 <center>![Install](images/microci-install.svg)</center>
 
