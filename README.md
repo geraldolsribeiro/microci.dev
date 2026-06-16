@@ -27,7 +27,7 @@ Define automation in YAML. Generate plain Bash. Run the same pipeline anywhere.
 
 <div align="center">
 
-![Portable Pipelines](docs/images/microci-ci_cd_pipeline.svg)
+![Portable Pipelines](images/microci-ci_cd_pipeline.svg)
 
 </div>
 
@@ -54,7 +54,7 @@ It fits many automation use cases:
 
 <div align="center">
 
-![YAML to Bash](docs/images/microci-yaml_to_bash.svg)
+![YAML to Bash](images/microci-yaml_to_bash.svg)
 
 </div>
 
@@ -70,7 +70,7 @@ microCI | bash
 
 <div align="center">
 
-![How to execute](docs/images/microci-execute.svg)
+![How to execute](images/microci-execute.svg)
 
 </div>
 
