@@ -54,6 +54,8 @@ It fits many automation use cases:
 
 <div align="center" markdown="1">
 
+**YAML to Bash**
+
 ![YAML to Bash](images/microci-yaml_to_bash.svg)
 
 </div>
