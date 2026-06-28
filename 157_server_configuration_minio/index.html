@@ -997,6 +997,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../238_plugin_asciidoc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 asciidoc plugin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../240_plugin_clang-format/" class="md-nav__link">
         
   
@@ -1267,6 +1294,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../254_plugin_cpp_compiler/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🖥️ C++ compiler image
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../300_config_display/" class="md-nav__link">
         
   
@@ -1383,10 +1437,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_41" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_43" >
         
           
-          <label class="md-nav__link" for="__nav_41" id="__nav_41_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_43" id="__nav_43_label" tabindex="0">
             
   
   
@@ -1404,8 +1458,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_41_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_41">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_43_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_43">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1598,22 +1652,22 @@ Securing the server is not covered in this topic.</p>
 <h2 id="gitlab-ciyml">.gitlab-ci.yml</h2>
 <p>The following config can be used to upgrade the server.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">before_script</span><span class="p">:</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="err">*</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo apt-get update -qq</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">* echo apt-get install -qq git</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain"># Setup SSH deploy keys</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">* &#39;which ssh-agent || ( apt-get install -qq openssh-client )&#39;</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">* eval $(ssh-agent -s)</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">* ssh-add &lt;(echo &quot;$SSH_PRIVATE_KEY&quot;)</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">* mkdir -p ~/.ssh</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">* grep -q 10.20.30.40 ~/.ssh/known_host || ssh-keyscan -t rsa 10.20.30.40 &gt;&gt; ~/.ssh/known_hosts</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">* &#39;[[ -f /.dockerenv ]] &amp;&amp; echo -e &quot;Host *\n\tStrictHostKeyChecking no\n\n&quot; &gt; ~/.ssh/config&#39;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo apt-get update -qq</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo apt-get install -qq git</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="c1"># Setup SSH deploy keys</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;which</span><span class="nv"> </span><span class="s">ssh-agent</span><span class="nv"> </span><span class="s">||</span><span class="nv"> </span><span class="s">(</span><span class="nv"> </span><span class="s">apt-get</span><span class="nv"> </span><span class="s">install</span><span class="nv"> </span><span class="s">-qq</span><span class="nv"> </span><span class="s">openssh-client</span><span class="nv"> </span><span class="s">)&#39;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eval $(ssh-agent -s)</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ssh-add &lt;(echo &quot;$SSH_PRIVATE_KEY&quot;)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdir -p ~/.ssh</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">grep -q 10.20.30.40 ~/.ssh/known_host || ssh-keyscan -t rsa 10.20.30.40 &gt;&gt; ~/.ssh/known_hosts</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;[[</span><span class="nv"> </span><span class="s">-f</span><span class="nv"> </span><span class="s">/.dockerenv</span><span class="nv"> </span><span class="s">]]</span><span class="nv"> </span><span class="s">&amp;&amp;</span><span class="nv"> </span><span class="s">echo</span><span class="nv"> </span><span class="s">-e</span><span class="nv"> </span><span class="s">&quot;Host</span><span class="nv"> </span><span class="s">*\n\tStrictHostKeyChecking</span><span class="nv"> </span><span class="s">no\n\n&quot;</span><span class="nv"> </span><span class="s">&gt;</span><span class="nv"> </span><span class="s">~/.ssh/config&#39;</span>
 <a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
 <a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="nt">deploy</span><span class="p">:</span>
 <a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">  </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">production</span>
 <a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">  </span><span class="nt">script</span><span class="p">:</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="err">*</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ssh admin@10.20.30.40 &quot;cd /opt/docker/minio &amp;&amp; git checkout main &amp;&amp; git pull origin main &amp;&amp; make upgrade &amp;&amp; make stop &amp;&amp; make start &amp;&amp; exit&quot;</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ssh admin@10.20.30.40 &quot;cd /opt/docker/minio &amp;&amp; git checkout main &amp;&amp; git pull origin main &amp;&amp; make upgrade &amp;&amp; make stop &amp;&amp; make start &amp;&amp; exit&quot;</span>
 <a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">  </span><span class="nt">only</span><span class="p">:</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="err">*</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
 </code></pre></div>
 
 

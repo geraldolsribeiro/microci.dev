@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../253_plugin_raspberry_pico/">
+        <link rel="prev" href="../254_plugin_cpp_compiler/">
       
       
         <link rel="next" href="../999_pip/">
@@ -928,6 +928,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../238_plugin_asciidoc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 asciidoc plugin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../240_plugin_clang-format/" class="md-nav__link">
         
   
@@ -1195,6 +1222,33 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../254_plugin_cpp_compiler/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🖥️ C++ compiler image
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -1324,10 +1378,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_41" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_43" >
         
           
-          <label class="md-nav__link" for="__nav_41" id="__nav_41_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_43" id="__nav_43_label" tabindex="0">
             
   
   
@@ -1345,8 +1399,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_41_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_41">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_43_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_43">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1459,7 +1513,7 @@
 
 <h1 id="running-graphical-application-inside-docker">Running graphical application inside docker</h1>
 <p>To enable execution of graphical application inside the docker container you should add the <code>DISPLAY</code> environment variable, and mount the <code>/tmp/.X11-unix</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    * name: &quot;QtCreator GUI for local edition&quot;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  - name: &quot;QtCreator GUI for local edition&quot;
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    docker: &quot;my_company/devel-ubuntu-24.04_x86_64&quot;
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    network: none
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    only: qtcreator
