@@ -351,13 +351,74 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#install" class="md-nav__link">
+  <a href="#install-microci_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Install
+        Install microCI
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-docker-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install Docker Engine
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Docker Engine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#platform-specific-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Platform-Specific Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-installation-configuration-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Post-Installation Configuration (Linux)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1026,7 +1087,7 @@
   <span class="md-ellipsis">
     
   
-    📚 asciidoc plugin
+    📚 AsciiDoc plugin
   
 
     
@@ -1343,6 +1404,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../299_plugin_unsafe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⚙️ Unsafe plugin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../300_config_display/" class="md-nav__link">
         
   
@@ -1459,10 +1547,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_43" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_44" >
         
           
-          <label class="md-nav__link" for="__nav_43" id="__nav_43_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_44" id="__nav_44_label" tabindex="0">
             
   
   
@@ -1480,8 +1568,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_43_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_43">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_44_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_44">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1592,13 +1680,74 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#install" class="md-nav__link">
+  <a href="#install-microci_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Install
+        Install microCI
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-docker-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install Docker Engine
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Docker Engine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#platform-specific-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Platform-Specific Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-installation-configuration-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Post-Installation Configuration (Linux)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verify Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1657,25 +1806,53 @@
 <p>These tools are necessary because microCI generates Bash and expects a minimal runtime layer to execute portable steps consistently across machines.</p>
 <p>At runtime, the simplicity stays the same: <code>microCI | bash</code>.</p>
 <p>To run only specific steps, use <code>-O/--only</code> for a single named step or <code>-N/--number</code> with one or more comma-separated step numbers, such as <code>microCI --number 2,3,5</code>.</p>
-<h2 id="install">Install</h2>
-<center>![Install](images/microci-install.svg)</center>
-
+<h2 id="install-microci_1">Install microCI</h2>
+<div align="center">
+<p><img alt="Install" src="../images/microci-install.svg" /></center></p>
+</div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://microci.dev/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+</code></pre></div>
+<h2 id="install-docker-engine">Install Docker Engine</h2>
+<p>Docker is a core requirement for microCI. It provides isolated execution environments for all pipeline steps, ensuring consistency and reproducibility across different machines and operating systems.</p>
+<h3 id="quick-installation">Quick Installation</h3>
+<p>The fastest way to install Docker Engine on most Linux distributions:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://get.docker.com<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+</code></pre></div>
+<p>This script automatically detects your Linux distribution and installs Docker Engine with all necessary dependencies.</p>
+<h3 id="platform-specific-installation">Platform-Specific Installation</h3>
+<p>For detailed installation instructions tailored to your operating system, visit the official Docker documentation:</p>
+<ul>
+<li><strong>Linux</strong>: <a href="https://docs.docker.com/engine/install/">Install Docker Engine on Linux</a></li>
+<li><strong>macOS</strong>: <a href="https://docs.docker.com/desktop/setup/install/mac-install/">Install Docker Desktop on Mac</a></li>
+<li><strong>Windows</strong>: <a href="https://docs.docker.com/desktop/setup/install/windows-install/">Install Docker Desktop on Windows</a></li>
+</ul>
+<h3 id="post-installation-configuration-linux">Post-Installation Configuration (Linux)</h3>
+<p>On Linux systems, Docker commands require elevated privileges by default. To use Docker as a non-root user:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span><span class="nv">$USER</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>newgrp<span class="w"> </span>docker
+</code></pre></div>
+<p>After running these commands, log out and log back in for the group changes to take effect.</p>
+<h3 id="verify-installation">Verify Installation</h3>
+<p>Confirm that Docker is properly installed and accessible:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>--version
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>docker<span class="w"> </span>run<span class="w"> </span>hello-world
 </code></pre></div>
 <h2 id="update">Update</h2>
 <p>Keep the same workflow and refresh the binary:</p>
-<center>![Update](images/microci-update.svg)</center>
-
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>microCI<span class="w"> </span>--update<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+<div align="center">
+<p><img alt="Update" src="../images/microci-update.svg" /></p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>microCI<span class="w"> </span>--update<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
 </code></pre></div>
 <p>To track development builds instead:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>microCI<span class="w"> </span>--update-dev<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>microCI<span class="w"> </span>--update-dev<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
 </code></pre></div>
 <h2 id="remove">Remove</h2>
 <p>Remove microCI from your system:</p>
-<center>![Uninstall](images/microci-uninstall.svg)</center>
-
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>microCI<span class="w"> </span>--uninstall<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+<div align="center">
+<p><img alt="Uninstall" src="../images/microci-uninstall.svg" /></p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>microCI<span class="w"> </span>--uninstall<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
 </code></pre></div>
 
 

@@ -23,7 +23,7 @@
     
     
       
-        <title>📚 asciidoc plugin - microCI Documentation</title>
+        <title>📚 AsciiDoc plugin - microCI Documentation</title>
       
     
     
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              📚 asciidoc plugin
+              📚 AsciiDoc plugin
             
           </span>
         </div>
@@ -944,7 +944,7 @@
   <span class="md-ellipsis">
     
   
-    📚 asciidoc plugin
+    📚 AsciiDoc plugin
   
 
     
@@ -962,7 +962,7 @@
   <span class="md-ellipsis">
     
   
-    📚 asciidoc plugin
+    📚 AsciiDoc plugin
   
 
     
@@ -1354,6 +1354,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../299_plugin_unsafe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⚙️ Unsafe plugin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../300_config_display/" class="md-nav__link">
         
   
@@ -1470,10 +1497,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_43" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_44" >
         
           
-          <label class="md-nav__link" for="__nav_43" id="__nav_43_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_44" id="__nav_44_label" tabindex="0">
             
   
   
@@ -1491,8 +1518,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_43_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_43">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_44_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_44">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1666,33 +1693,37 @@
   
 
 
-<h1 id="asciidoc-plugin">📚 asciidoc plugin</h1>
+<h1 id="asciidoc-plugin">📚 AsciiDoc plugin</h1>
 <h2 id="what-it-does">What it does</h2>
 <p>Convert AsciiDoc sources into HTML or other publishable formats.</p>
 <h2 id="why-it-exists">Why it exists</h2>
-<p>Use <code>asciidoc</code> when documentation needs to be built as part of the same portable pipeline as the rest of your workflow.</p>
+<p>Use <code>asciidoc</code> when AsciiDoc documentation needs to be built as part of the same portable pipeline as the rest of your workflow.</p>
 <h2 id="how-it-works">How it works</h2>
-<p>The plugin runs the <code>intmain/microci_asciidoc</code> container and forwards the input file(s), options, and output file to the AsciiDoc toolchain.</p>
+<p>The plugin runs the <code>intmain/microci_asciidoc</code> container and forwards the input file(s), destination directory, and output file to the AsciiDoc toolchain.</p>
 <h2 id="example">Example</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">steps</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Generate</span><span class="nv"> </span><span class="s">HTML</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Asciidoc&quot;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Generate</span><span class="nv"> </span><span class="s">HTML</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">AsciiDoc&quot;</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Description</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">step&quot;</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">plugin</span><span class="p">:</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">asciidoc</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="nt">output_format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">html</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="nt">destination_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">_book</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="nt">input</span><span class="p">:</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">book/index.adoc</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Generate</span><span class="nv"> </span><span class="s">PDF</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">Asciidoc&quot;</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Description</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">step&quot;</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="nt">plugin</span><span class="p">:</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">asciidoc</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">      </span><span class="nt">output_format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pdf</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">      </span><span class="nt">destination_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">_book</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">      </span><span class="nt">input</span><span class="p">:</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">book/index.adoc</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.html</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">      </span><span class="nt">input</span><span class="p">:</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">book/index.adoc</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Generate</span><span class="nv"> </span><span class="s">PDF</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">AsciiDoc&quot;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Description</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">step&quot;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="nt">plugin</span><span class="p">:</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">asciidoc</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">      </span><span class="nt">output_format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pdf</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">      </span><span class="nt">destination_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">_book</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">      </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.pdf</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">      </span><span class="nt">input</span><span class="p">:</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">book/index.adoc</span>
 </code></pre></div>
+<p><code>output</code> is relative to <code>destination_dir</code>.
+```</p>
 <h2 id="related-image">Related image</h2>
 <ul>
 <li><code>dockerfiles/asciidoc/README.md</code></li>
